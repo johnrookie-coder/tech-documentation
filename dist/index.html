@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Technical Documentation</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div id="navbar">
+      <div class="header-container">
+        <div>
+          <h1><span>CSS</span> Documentation</h1>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#border">Border</a></li>
+          <li><a href="#color">Color</a></li>
+          <li><a href="#combinators">CSS Combinators</a></li>
+          <li><a href="#units">CSS Units</a></li>
+          <li><a href="#fonts">Fonts</a></li>
+          <li><a href="#margin">Margin</a></li>
+          <li><a href="#opacity">Opacity</a></li>
+          <li><a href="#overflow">Overflow</a></li>
+          <li><a href="#padding">Padding</a></li>
+          <li><a href="#position">Position</a></li>
+          <li><a href="#pseudo-class">Pseudo-Classes</a></li>
+          <li><a href="#pseudo-element">Pseudo-Elements</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main id="main-doc">
+      <section class="main-section">
+        <h2>Introduction to CSS</h2>
+        <div>
+          <p>
+            Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation
+            of a document written in a markup language like HTML.CSS is a cornerstone technology of the
+            World Wide Web, alongside HTML and JavaScript
+          </p>
+          <ul>
+                <li>CSS stands for Cascading Style Sheets</li>
+                <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+                <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+                <li>External stylesheets are stored in CSS files</li>
+                <li>CSS is not a programming language.</li>
+          </ul>
+        </div>
+      </section>
+
+     
+      <section class="main-section">
+        <h2 id="border">Border</h2>
+        <div>
+          <p> The CSS border properties allow you to specify the style, width, and color of an element's border.</p>
+          <p>To specify the border individually, you can use this:</p>
+
+          <ul>
+                <li>border-top</li>
+                <li>border-right</li>
+                <li>border-bottom</li>
+                <li>border-left</li>
+          </ul>
+
+          <pre>
+
+               .container {
+                    border: 3px solid #000;
+                }
+
+          </pre>
+        </div>
+      </section>
+
+      <section class="main-section">
+        <h2 id="color">Color</h2>
+        <div>
+          <p> There's a lot of ways to add colors in our CSS. It can be</p>
+
+          <ul>
+              <li>Predefined color (color names)</li>
+              <li>RGB (red, green, blue)</li>
+              <li>HEX (hexadecimal value)</li>
+              <li>HSL (hue ,saturation, lightness)</li>
+              <li>RGBA (red, green, blue, alpha)</li>
+              <li>HSLA (hue, saturation, lightness, alpha)</li>
+          </ul>
+
+          <pre>
+
+            nav {
+              background-color: midnightblue; 
+              color: #ffffff; 
+            }
+
+          </pre>
+        </div>
+      </section>
+
+      <section class="main-section">
+        <h2 id="combinators">CSS Combinators</h2>
+        <div>
+          <p>  A combinator is something that explains the relationship between the selectors. </p>
+          <p>  A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator. </p>
+          <p> There are four different combinators in CSS: </p>
+
+          <ul>
+              <li> descendant selector (space) </li>
+              <li> child selector (>) </li>
+              <li> adjacent sibling selector (+)</li>
+              <li> general sibling selector (~)</li>
+          </ul>
+
+          <pre>
+
+            div > p {
+              background-color: yellow;
+            }
+
+          </pre>
+        </div>
+      </section>
+
+      <section class="main-section">
+        <h2 id="units">CSS Units</h2>
+        <div>
+          <p>  CSS has several different units for expressing a length.</p>
+          <p>  Many CSS properties take "length" values, such as width, margin, padding, font-size, etc.</p>
+          <p>  Length is a number followed by a length unit, such as 10px, 2em, etc.</p>
+
+          <ul>
+              <li> <strong>Absolute Length </strong> - are fixed and a length expressed in any of these will appear as exactly that size.</li>
+              <li> <strong>Relative Length</strong> - specify a length relative to another length property. Relative length units scales better between different rendering mediums.</li>
+          </ul>
+
+          <pre>
+
+            p {
+              font-size: 25px;
+              line-height: 50px;
+            }
+
+          </pre>
+        </div>
+      </section>
+
+      <section class="main-section">
+        <h2 id="fonts">Fonts</h2>
+        <div>
+          <p> The CSS font properties define the font family, boldness, size, and the style of a text. </p>
+          <p> In CSS there are five generic font families:</p>
+
+          <ul>
+              <li>
+                   <strong>Serif</strong> - fonts have a small stroke at the edges of each letter. They create a sense of formality and elegance.
+              </li> 
+              <li>
+                   <strong>Sans-serif</strong>  - fonts have clean lines (no small strokes attached). They create a modern and minimalistic look.
+              </li>
+              <li>
+                  <strong>Monospace </strong> - fonts here all the letters have the same fixed width. They create a mechanical look. 
+              </li>  
+              <li><strong>Cursive</strong> - fonts imitate human handwriting.</li> 
+              <li><strong>Fantasy</strong> - fonts are decorative/playful fonts.</li>
+          </ul>
+
+          <pre>
+
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+            }
+
+          </pre>
+            <p>
+                  This will create a Arial font to all elements <strong>inside</strong> the body element,<em>Helvetica</em>,
+                  is the <strong>fallback</strong> font incase the Arial is not supported by user the web browser. 
+                  The <strong>sans-serif</strong> is the family where the font belongs.
+            </p>
+        </div>
+      </section>
+
+      <section class="main-section">
+        <h2 id='margin'>Margin</h2>
+        <div>
+          <p> The CSS margin properties are used to create space around elements, outside of any defined borders.</p>
+          <p> To specify the margin individually, you can use this:</p>
+
+          <ul>
+              <li>margin-top</li>
+              <li>margin-right</li>
+              <li>margin-bottom</li>
+              <li>margin-left</li>
+          </ul>
+
+          <pre>
+
+            .container {
+              margin: 10px 20px;
+            }
+
+          </pre>
+            <p>       
+              This will create a 10px margin from top and bottom. 20px in right and left <strong>top, right,bottom,left</strong> is the chronological order of margin
+            </p>
+        </div>
+      </section>
+
+      <section class="main-section">
+        <h2 id="opacity">Opacity</h2>
+        <div>
+          <p>  The opacity property specifies the opacity/transparency of an element. </p>
+
+          <ul>
+            <li>The opacity property is often used together with the :hover selector to change the opacity on mouse-over:</li>
+            <li> The opacity property can take a value from 0.0 - 1.0.</li>
+          </ul>
+
+          <pre>
+
+            img {
+              opacity: 0.5;
+            }
+
+          </pre>
+        </div>
+      </section>
+
+       <section class="main-section">
+        <h2 id="overflow">Overflow</h2>
+        <div>
+          <p>  
+              The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+          </p>
+          <p> The overflow property has the following values:</p>
+
+          <ul>
+            <li>
+                <strong>visible</strong> - Default. The overflow is not clipped. The content renders outside the element's box.
+            </li> 
+             <li>
+                <strong>hidden</strong>  - The overflow is clipped, and the rest of the content will be invisible
+            </li>
+            <li>
+              <strong>scroll </strong> - The overflow is clipped, and a scrollbar is added to see the rest of the content
+            </li>  
+            <li><strong>auto</strong> -  Similar to scroll, but it adds scrollbars only when necessary</li> 
+          </ul>
+
+          <pre>
+
+            .container {
+              overflow: hidden;
+            }
+
+          </pre>
+        </div>
+      </section>
+
+
+      <section class="main-section">
+        <h2 id="padding">Padding</h2>
+        <div>
+          <p>  The CSS padding properties are used to generate space around an element's content, inside of any defined borders.</p>
+          <p>  To specify the padding individually, you can use this:</p>
+
+          <ul>
+              <li>padding-top</li>
+              <li>padding-right</li>
+              <li>padding-bottom</li>
+              <li>padding-left</li>
+          </ul>
+
+          <pre>
+
+            .container {
+              padding: 20px;
+            }
+
+          </pre>
+            <p>       
+              This will create a padding of 20px in <strong>top, right, bottom and left</strong>
+            </p>
+        </div>
+      </section>
+
+      <section class="main-section">
+        <h2 id="position">Position</h2>
+        <div>
+          <p>  The position property specifies the type of positioning method used for an element.</p>
+          <p>  There are five different position values:</p>
+
+          <ul>
+              <li>static</li>
+              <li>relative</li>
+              <li>fixed</li>
+              <li>absolute</li>
+              <li>sticky</li>
+          </ul>
+
+          <pre>
+
+            .container {
+              position: relative;
+            }
+
+          </pre>
+        </div>
+      </section>
+
+      <section class="main-section">
+        <h2 id="pseudo-class">Pseudo-Classes </h2>
+        <div>
+          <p>  A pseudo-class is used to define a special state of an element. </p>
+          <p>  For example, it can be used to:</p>
+
+          <ul>
+              <li>Style an element when a user mouses over it</li>
+              <li>Style visited and unvisited links differently</li>
+              <li>Style an element when it gets focus</li>
+          </ul>
+
+          <pre>
+
+            selector:pseudo-class {
+              property: value;
+            }
+
+          </pre>
+        </div>
+      </section>
+
+      <section class="main-section">
+        <h2 id="pseudo-element">Pseudo-Elements</h2>
+        <div>
+          <p>  A CSS pseudo-element is used to style specified parts of an element.</p>
+          <p>  For example, it can be used to:</p>
+
+          <ul>
+              <li>Style the first letter, or line, of an element</li>
+              <li>Insert content before, or after, the content of an element</li>
+          </ul>
+
+          <pre>
+
+            selector::pseudo-element {
+              property: value;
+            }
+
+          </pre>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

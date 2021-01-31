@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Roboto:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* background-color: #f9f9f9; */
+  font-family: "Mulish", sans-serif;
+}
+
+body .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+body .wrapper #navbar {
+  background-color: #f2f2f2;
+  padding: 1rem;
+  border-right: 1px solid #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22%;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+body .wrapper #navbar .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+body .wrapper #navbar .header-container h1 {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  margin: 25px 0;
+  text-align: center;
+}
+
+body .wrapper #navbar .header-container h1 span {
+  color: #3114df;
+  letter-spacing: 0.2rem;
+}
+
+body .wrapper #navbar nav ul {
+  list-style: none;
+}
+
+body .wrapper #navbar nav ul li {
+  line-height: 1.5;
+  padding: 0.5rem;
+}
+
+body .wrapper #navbar nav ul li:not(:last-of-type) {
+  border-bottom: 1px solid #ccc;
+  padding: 0.7rem;
+}
+
+body .wrapper #navbar nav ul li a {
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+body .wrapper #navbar nav ul li:hover {
+  border-radius: 6px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(#2e0076),
+    color-stop(#270075),
+    color-stop(#1f0074),
+    color-stop(#150072),
+    to(#050071)
+  );
+  background-image: linear-gradient(
+    to right bottom,
+    #2e0076,
+    #270075,
+    #1f0074,
+    #150072,
+    #050071
+  );
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  padding: 0.7rem;
+}
+
+body .wrapper #navbar nav ul li:hover > a {
+  color: #fff;
+}
+
+body .wrapper #main-doc {
+  padding: 2rem;
+  margin-left: 20%;
+  height: auto;
+  width: 77%;
+}
+
+body .wrapper #main-doc .main-section {
+  line-height: 1.7;
+  padding: 1rem 2rem;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+body .wrapper #main-doc .main-section h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+body .wrapper #main-doc .main-section div {
+  font-size: 1.25rem;
+}
+
+body .wrapper #main-doc .main-section div ul {
+  margin-top: 12px;
+  margin-bottom: 30px;
+  margin-left: 35px;
+  max-width: 100%;
+}
+
+body .wrapper #main-doc .main-section div pre {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(#2e0076),
+    color-stop(#270075),
+    color-stop(#1f0074),
+    color-stop(#150072),
+    to(#050071)
+  );
+  background-image: linear-gradient(
+    to right bottom,
+    #2e0076,
+    #270075,
+    #1f0074,
+    #150072,
+    #050071
+  );
+  border-radius: 15px;
+  color: #fff;
+  font-size: 1.15rem;
+  font-family: "Mulish", sans-serif;
+  max-height: 180px;
+  margin-bottom: 20px;
+  max-width: 75%;
+  overflow: hidden;
+}
+/*# sourceMappingURL=styles.css.map */
