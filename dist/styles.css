@@ -8,7 +8,7 @@
 }
 
 body {
-  /* background-color: #f9f9f9; */
+  background-color: #f9f9f9;
   font-family: "Mulish", sans-serif;
 }
 
@@ -61,17 +61,17 @@ body .wrapper #navbar nav ul {
   list-style: none;
 }
 
-body .wrapper #navbar nav ul li {
+body .wrapper #navbar nav ul .nav-link {
   line-height: 1.5;
   padding: 0.5rem;
 }
 
-body .wrapper #navbar nav ul li:not(:last-of-type) {
+body .wrapper #navbar nav ul .nav-link:not(:last-of-type) {
   border-bottom: 1px solid #ccc;
   padding: 0.7rem;
 }
 
-body .wrapper #navbar nav ul li a {
+body .wrapper #navbar nav ul .nav-link a {
   color: #000;
   font-family: "Raleway", sans-serif;
   font-size: 1.2rem;
@@ -79,7 +79,8 @@ body .wrapper #navbar nav ul li a {
   text-decoration: none;
 }
 
-body .wrapper #navbar nav ul li:hover {
+body .wrapper #navbar nav ul .nav-link:hover,
+body .wrapper #navbar nav ul .nav-link.active {
   border-radius: 6px;
   background-image: -webkit-gradient(
     linear,
@@ -105,8 +106,30 @@ body .wrapper #navbar nav ul li:hover {
   padding: 0.7rem;
 }
 
-body .wrapper #navbar nav ul li:hover > a {
+body .wrapper #navbar nav ul .nav-link:hover > a,
+body .wrapper #navbar nav ul .nav-link.active > a {
   color: #fff;
+}
+
+body .wrapper #navbar nav ul .nav-link.active {
+  background-image: -webkit-gradient(
+    linear,
+    right top,
+    left bottom,
+    from(#00061f),
+    color-stop(#000c37),
+    color-stop(#00104f),
+    color-stop(#000d65),
+    to(#00007a)
+  );
+  background-image: linear-gradient(
+    to left bottom,
+    #00061f,
+    #000c37,
+    #00104f,
+    #000d65,
+    #00007a
+  );
 }
 
 body .wrapper #main-doc {
