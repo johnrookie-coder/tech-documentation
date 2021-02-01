@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Roboto:wght@900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -7,9 +8,22 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #f9f9f9;
   font-family: "Mulish", sans-serif;
+  background: white;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(white),
+    color-stop(36%, #e3e7fc),
+    to(#e8e7ff)
+  );
+  background: linear-gradient(90deg, white 0%, #e3e7fc 36%, #e8e7ff 100%);
 }
 
 body .wrapper {
@@ -22,7 +36,6 @@ body .wrapper {
 }
 
 body .wrapper #navbar {
-  background-color: #f2f2f2;
   padding: 1rem;
   border-right: 1px solid #000;
   position: fixed;
@@ -45,15 +58,20 @@ body .wrapper #navbar .header-container {
   justify-content: center;
 }
 
-body .wrapper #navbar .header-container h1 {
+body .wrapper #navbar .header-container div {
+  height: 130px;
+  max-width: 100%;
+}
+
+body .wrapper #navbar .header-container div h1 {
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
   margin: 25px 0;
   text-align: center;
 }
 
-body .wrapper #navbar .header-container h1 span {
-  color: #3114df;
+body .wrapper #navbar .header-container div h1 span {
+  color: #5b325b;
   letter-spacing: 0.2rem;
 }
 
@@ -67,13 +85,13 @@ body .wrapper #navbar nav ul .nav-link {
 }
 
 body .wrapper #navbar nav ul .nav-link:not(:last-of-type) {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #c7c4c9;
   padding: 0.7rem;
 }
 
 body .wrapper #navbar nav ul .nav-link a {
   color: #000;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
   text-decoration: none;
@@ -190,5 +208,36 @@ body .wrapper #main-doc .main-section div pre {
   margin-bottom: 20px;
   max-width: 75%;
   overflow: hidden;
+}
+
+body .wrapper #main-doc .back-To-Top {
+  background-color: #050071;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  top: 550px;
+  left: 1250px;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+body .wrapper #main-doc .back-To-Top.active {
+  opacity: 1;
 }
 /*# sourceMappingURL=styles.css.map */
