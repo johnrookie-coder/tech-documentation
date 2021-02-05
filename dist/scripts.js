@@ -1,13 +1,14 @@
 // UI Variables
 const uiNavLinks = document.querySelectorAll('.nav-link');
-let links = [ 'intro-CSS', 'border', 'color']
+const links = ['#intro-CSS', '#border', '#color', '#combinators','#units', '#fonts','#margin', '#opacity', '#overflow', '#padding', '#position', '#pseudo-class', '#pseudo-element'];
 
-uiNavLinks.forEach((link, idx)=> {
+uiNavLinks.forEach((link,idx)=> {
   link.addEventListener('click', () => {
     removeClass();
-    link.classList.add('active');
-
-
+      
+    link.classList.add('active'); 
+    let mLinks = links[idx]
+    newLink(mLinks);
   })
 })
 
@@ -29,3 +30,7 @@ window.addEventListener('scroll', () => {
     uiBackToTop.classList.remove('active')
   }
 })
+
+function newLink(link) {
+  window.location.assign(link);
+}
